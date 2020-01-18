@@ -8,11 +8,18 @@
             </div>
         {% endif %}
 		<h1>{{ project.title }}</h1>
-        <h4 style="font-size: 18px; font-family: 'Product Sans'">Made by: {{ project.author }}</h4>
+        <h4 style="font-size: 16px; font-family: 'Product Sans'">Made by: {{ project.author }}</h4>
         <br>
         <p>{{ project.long_description|linebreaksbr }}</p>
         <br>
-        <p>Languages / Frameworks used: {{ project.languages_or_Frameworks_used|linebreaksbr }}</p>
-        <br><br><br>
+        <p style="font-size: 16px; font-family: 'Product Sans';">Languages / Frameworks used: {{ project.languages_or_Frameworks_used|linebreaksbr }}</p>
+        <br><br>
+        {% if loginStat == True %}
+        <div class="row">
+            <div class="col-md-12">
+                <h3 style="border: 2px solid #15171c; padding-top: 12px; padding-bottom: 12px; padding-left: 8px; padding-right: 8px;"><a href="{% url 'project_delete' pk=project.pk %}">Delete Project</a></h3>
+            </div>
+        </div>
+        {% endif %}
     </div>
 {% endblock %}

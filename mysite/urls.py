@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include, re_path
+from django.conf import settings
+from django.conf.urls.static import static
 from sec import views as sec_view
 from app import views as app_view
 
@@ -28,7 +30,11 @@ urlpatterns = [
 	path('profile/', sec_view.profile, name='profile'),
 	path('project/', app_view.project, name='project'),
 	path('project/new/', app_view.project_new, name='project_new'),
-	path('project/details/<int:pk>', app_view.project_detail, name='project_detail'),
+	path('project/details/<int:pk>/', app_view.project_detail, name='project_detail'),
+	path('project/delete/<int:pk>/', app_view.project_delete, name='project_delete'),
 	path('profile/password/', sec_view.change_password, name='change_password'),
 	path('', sec_view.home, name='home'),
 ]
+
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
