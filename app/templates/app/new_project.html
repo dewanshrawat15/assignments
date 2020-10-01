@@ -5,11 +5,11 @@
 		<form method="POST" enctype="multipart/form-data">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<legend class="bottom-border mb4">Project</legend>
-				{{ form|crispy }}
+				<h3 class="font-weight-bold mb-4">Project</legend>
 			</fieldset>
+			{{ form|crispy }}
 			<div class="form-group">
-				<button class="btn btn-default" type="Submit">Save</button>
+				<button class="btn btn-success mt-4" type="Submit">Save</button>
 			</div>
 		</form>
 		<br>

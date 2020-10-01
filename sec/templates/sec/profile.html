@@ -4,56 +4,59 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style type="text/css">
 	
-	h2, h3{
+	*{
 		font-family: 'Product Sans', sans-serif;
-	}
-
-	a, a:hover, a:visited, a:active{
-		text-decoration: none;
-		font-size: 16px;
-		color: #13171c;
-	}
+  }
+  
+  p{
+    font-size: 18px;
+    margin-top: 20px;
+  }
 
 	.profile{
 		padding: 75px 0 75px 0;
 	}
 
-	table, td{
-		font-family: 'Product Sans', sans-serif;
-		font-size: 16px;
-	}
-
 </style>
 <div class="profile">
 <div class="container">
-  <h2>Profile</h2>              
-  <br><br>                                                 
-  <div class="table-responsive">          
-  <table class="table">
-    <tbody>
-      <tr>
-        <td>Username</td>
-        <td>{{ user.username }}</td>
-      </tr>
-       <tr>
-        <td>First Name</td>
-        <td>{{ user.first_name }}</td>
-      </tr>
-       <tr>
-        <td>Last Name</td>
-        <td>{{ user.last_name }}</td>
-      </tr>
-       <tr>
-        <td>Email</td>
-        <td>{{ user.email }}</td>
-      </tr>
-      <tr>
-        <td>Password</td>
-        <td><a href="{% url 'change_password' %}">Change Password</a></td>
-      </tr>
-    </tbody>
-  </table>
-  <a href="{% url 'edit' %}">Edit Details</a>
+  <div class="float-right mr-5">
+    <a href="{% url 'edit' %}"><button class="btn btn-info">Edit Details</button></a>
+  </div>
+  <h2 class="font-weight-bold mb-4">Profile</h2>    
+         
+  <div class="row">
+    <div class="col-4">
+      <p class="font-weight-bold">Username</p>
+    </div>
+    <div class="col-8">
+      <p>{{ user.username }}</p>
+    </div>
+    <div class="col-4">
+      <p class="font-weight-bold">First Name</p>
+    </div>
+    <div class="col-8">
+      <p>{{ user.first_name }}</p>
+    </div>
+    <div class="col-4">
+      <p class="font-weight-bold">Last Name</p>
+    </div>
+    <div class="col-8">
+      <p>{{ user.last_name }}</p>
+    </div>
+    <div class="col-4">
+      <p class="font-weight-bold">Email</p>
+    </div>
+    <div class="col-8">
+      <p>{{ user.email }}</p>
+    </div>
+    <div class="col-4">
+      <p class="font-weight-bold">Password</p>
+    </div>
+    <div class="col-8">
+      <p><a href="{% url 'change_password' %}"><button class="btn btn-outline-secondary">Change Password</button></a></p>
+    </div>
+    
   </div>
 </div>
 </div>

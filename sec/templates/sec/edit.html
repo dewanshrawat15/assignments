@@ -1,15 +1,16 @@
 {% extends 'sec/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-	<div class="content-section">
+	<div class="content-section w-75 mx-auto">
 		<form method="POST">
 			{% csrf_token %}
 			<fieldset class="form-group">
-				<legend class="bottom-border mb4">Edit Details</legend>
-				{{ form|crispy }}
+				<h3 class="font-weight-bold mb-4">Edit Details</h3>
 			</fieldset>
+				{{ form|crispy }}
+			
 			<div class="form-group">
-				<button class="btn btn-default" type="Submit">Save</button>
+				<button class="btn btn-success mt-4" type="Submit">Save</button>
 			</div>
 		</form>
 		<br>
