@@ -4,22 +4,18 @@
 <style type="text/css">
 	
 	.projects{
-		padding-top: 15px;
-		padding-bottom: 15px;
-		padding-left: 20px;
-		padding-right: 20px;
+		
 		background: #f8f8f8;
-		box-shadow: 4px 4px 3px #777;
 	}
 
 </style>
 
 	<div class="content-section">		
 		{% for i in projects %}
-			<div class="projects">
+			<div class="projects shadow p-5">
 				<div class="row">
 					<div class="col-md-12">
-						<h3><a href="{% url 'project_detail' pk=i.pk %}">{{ i.title }}</a></h3>
+						<a href="{% url 'project_detail' pk=i.pk %}"><h3>{{ i.title }}</h3></a>
 					</div>
 				</div>
 				{% if loginStat == False %}
@@ -32,12 +28,12 @@
 				{% endif %}
 				<div class="row">
 					<div class="col-md-12">
-						<p>{{ i.short_description }}</p>
+						<p class="font-weight-bold">{{ i.short_description }}</p>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<p style="font-size: 14px; font-family: 'Product Sans';">Languages / Frameworks used {{ i.languages_or_Frameworks_used }}</p>
+						<p>Languages / Frameworks used {{ i.languages_or_Frameworks_used }}</p>
 					</div>
 				</div>
 			</div>

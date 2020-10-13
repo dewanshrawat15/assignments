@@ -7,12 +7,12 @@
                 {{ project.submitted_Date_Time }}
             </div>
         {% endif %}
-		<h1>{{ project.title }}</h1>
-        <h4 style="font-size: 16px; font-family: 'Product Sans'">Made by: {{ project.author }}</h4>
+		<h1 class="font-weight-bold mb-3">{{ project.title }}</h1>
+        <h5>Made by: {{ project.author }}</h5>
         <br>
         <p>{{ project.long_description|linebreaksbr }}</p>
         <br>
-        <p style="font-size: 16px; font-family: 'Product Sans';">Languages / Frameworks used: {{ project.languages_or_Frameworks_used|linebreaksbr }}</p>
+        <p>Languages / Frameworks used: {{ project.languages_or_Frameworks_used|linebreaksbr }}</p>
         <br><br>
         {% if loginStat == True %}
         <div class="row">
