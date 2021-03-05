@@ -16,7 +16,7 @@ Currently working on improving the UI. Also working on implementing a zip file u
 None as of now. Feel free to open an issue if any!
 
 # Wanna Contribute ?
-Yeah, sure, why not. Just be sure to connect with me at [dewanshrawat.tech](https://dewanshrawat.tech)
+Yeah, sure, why not. Just be sure to connect with me at [dewanshrawat.in](https://dewanshrawat.in)
 
 # Originality
 The idea is inspired by Devfolio's projects system. Just tweaked it a bit so that it could fulfill my requirements.
